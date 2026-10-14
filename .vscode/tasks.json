@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CUDA: build and run current file",
+      "type": "shell",
+      "command": "nvcc -O3 -arch=sm_61 -Wno-deprecated-gpu-targets ${file} -o ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
+      "options": { "env": { "PATH": "/usr/local/cuda-12.9/bin:${env:PATH}" } },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}

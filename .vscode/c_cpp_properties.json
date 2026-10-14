@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "name": "CUDA (GTX 1060, sm_61)",
+      "compilerPath": "/usr/local/cuda-12.9/bin/nvcc",
+      "compilerArgs": ["-arch=sm_61"],
+      "includePath": ["${workspaceFolder}/**", "/usr/local/cuda-12.9/include"],
+      "cStandard": "c17",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ],
+  "version": 4
+}
