@@ -1,0 +1,16 @@
+# Graded course exercises: solutions and the course's grader stay private
+exercices/
+
+# Build outputs
+output/
+*.dSYM/
+c2.intro/benchmark
+cuda/mykernel
+gpu/mykernel
+*.o
+*.out
+
+# macOS / editor state
+.DS_Store
+xcuserdata/
+__pycache__/
