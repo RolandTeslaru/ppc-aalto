@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CUDA: debug current file",
+      "type": "cuda-gdb",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}-debug",
+      "args": "",
+      "cwd": "${fileDirname}",
+      "debuggerPath": "/usr/local/cuda-12.9/bin/cuda-gdb",
+      "preLaunchTask": "CUDA: build debug",
+      "environment": [
+        {
+          "name": "CUDA_DEBUGGER_SOFTWARE_PREEMPTION",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

@@ -5,8 +5,27 @@
       "label": "CUDA: build and run current file",
       "type": "shell",
       "command": "nvcc -O3 -arch=sm_61 -Wno-deprecated-gpu-targets ${file} -o ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
-      "options": { "env": { "PATH": "/usr/local/cuda-12.9/bin:${env:PATH}" } },
-      "group": { "kind": "build", "isDefault": true },
+      "options": {
+        "env": {
+          "PATH": "/usr/local/cuda-12.9/bin:${env:PATH}"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CUDA: build debug",
+      "type": "shell",
+      "command": "nvcc -g -G -O0 -arch=sm_61 -Wno-deprecated-gpu-targets ${file} -o ${fileDirname}/${fileBasenameNoExtension}-debug",
+      "options": {
+        "env": {
+          "PATH": "/usr/local/cuda-12.9/bin:${env:PATH}"
+        }
+      },
+      "group": "build",
       "problemMatcher": []
     }
   ]
