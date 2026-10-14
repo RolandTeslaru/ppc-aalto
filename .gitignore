@@ -6,6 +6,7 @@ output/
 *.dSYM/
 c2.intro/benchmark
 cuda/mykernel
+*-debug
 gpu/mykernel
 *.o
 *.out
